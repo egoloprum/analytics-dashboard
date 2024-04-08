@@ -50,7 +50,7 @@ const AnalyticsDashboard = ({avgVisitorsPerDay, amtVisitorsToday, timeseriesPage
             </h2>
             <div className="col-span-3 flex items-center justify-between flex-wrap gap-8">
                {topCountries?.map(([countryCode, number]) => {
-                  return <div className="flex items-center gap-3 text-dark-tremor-content-strong">
+                  return <div key={countryCode} className="flex items-center gap-3 text-dark-tremor-content-strong">
                      <p className="hidden sm:block text-tremor-content">{ countryCode }</p>
                      <ReactCountryFlag className="text-5xl sm:text-3xl" svg countryCode={countryCode} />
                      <p className="text-tremor-content sm:text-dark-tremor-content-strong">{number}</p>
